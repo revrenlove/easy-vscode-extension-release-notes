@@ -2,8 +2,14 @@
   "name": "easy-vscode-extension-release-notes",
   "version": "0.0.1",
   "description": "Simple package to display a \"What's New\" type page when your VS Code extension you authored updates.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +29,7 @@
     "@types/semver": "^7.5.8",
     "@types/vscode": "^1.88.0",
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
     "typescript": "^5.4.4"
   },
   "dependencies": {
