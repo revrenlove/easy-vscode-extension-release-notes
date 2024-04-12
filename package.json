@@ -1,0 +1,33 @@
+{
+  "name": "easy-vscode-extension-release-notes",
+  "version": "0.0.1",
+  "description": "Simple package to display a \"What's New\" type page when your VS Code extension you authored updates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revrenlove/easy-vscode-extension-release-notes.git"
+  },
+  "keywords": [
+    "vscode"
+  ],
+  "author": "revrenlove",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/revrenlove/easy-vscode-extension-release-notes/issues"
+  },
+  "homepage": "https://github.com/revrenlove/easy-vscode-extension-release-notes#readme",
+  "devDependencies": {
+    "@types/semver": "^7.5.8",
+    "@types/vscode": "^1.88.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "marked": "^12.0.1",
+    "semver": "^7.6.0"
+  }
+}
