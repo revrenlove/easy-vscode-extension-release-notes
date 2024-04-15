@@ -65,6 +65,16 @@ jobs:
                   skip-tag: "true"
                   version-type: "major"
 
+            - name: Bump Pre-release
+              if: ${{ contains(fromJson(steps.get-labels.outputs.label-names), 'pre-release') }}
+              uses: phips28/gh-action-bump-version@master
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  skip-commit: "true"
+                  skip-tag: "true"
+                  version-type: "prelease"
+
             # - name: Bump Version
             #   uses: ./.github/workflows/actions/bump-version
             #   with:
