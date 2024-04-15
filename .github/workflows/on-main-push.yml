@@ -41,9 +41,28 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  #   version-type: "patch"
                   skip-commit: "true"
                   skip-tag: "true"
+
+            - name: Bump Major
+              if: ${{ contains(fromJson(steps.get-labels.outputs.label-names), 'major') }}
+              uses: phips28/gh-action-bump-version@master
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  skip-commit: "true"
+                  skip-tag: "true"
+                  version-type: "major"
+
+            - name: Bump Minor
+              if: ${{ contains(fromJson(steps.get-labels.outputs.label-names), 'minor') }}
+              uses: phips28/gh-action-bump-version@master
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              with:
+                  skip-commit: "true"
+                  skip-tag: "true"
+                  version-type: "minor"
 
             # - name: Bump Version
             #   uses: ./.github/workflows/actions/bump-version
