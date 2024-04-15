@@ -37,6 +37,7 @@ jobs:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Bump Patch
+              if: ${{ !contains(fromJson(steps.get-labels.outputs.label-names), 'pre-release') }}
               uses: phips28/gh-action-bump-version@master
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
