@@ -75,12 +75,6 @@ jobs:
                   skip-tag: "true"
                   version-type: "prerelease"
 
-            # - name: Bump Version
-            #   uses: ./.github/workflows/actions/bump-version
-            #   with:
-            #       current-version: ${{ steps.package-version.outputs.current-version}}
-            #       label-names: ${{ steps.get-labels.outputs.label-names }}
-
             - name: Create Version Bump Pull Request
               id: create-pr
               uses: peter-evans/create-pull-request@v6
