@@ -73,7 +73,7 @@ jobs:
               with:
                   skip-commit: "true"
                   skip-tag: "true"
-                  version-type: "prelease"
+                  version-type: "prerelease"
 
             # - name: Bump Version
             #   uses: ./.github/workflows/actions/bump-version
