@@ -1,6 +1,6 @@
 {
   "name": "@revrenlove/easy-vscode-extension-release-notes",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Simple package to display a \"What's New\" type page when your VS Code extension you authored updates.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
