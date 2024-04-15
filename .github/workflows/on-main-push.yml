@@ -41,7 +41,9 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
-                  version-type: "patch"
+                  #   version-type: "patch"
+                  skip-commit: "true"
+                  skip-tag: "true"
 
             # - name: Bump Version
             #   uses: ./.github/workflows/actions/bump-version
